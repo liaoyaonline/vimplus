@@ -34,9 +34,9 @@ function is_ubuntu1604()
 # 在ubuntu上源代码安装vim
 function compile_vim_on_ubuntu()
 {
-    sudo apt-get remove -y vim vim-runtime gvim
-    sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
-    sudo rm -rf /usr/bin/vim*
+    sudo apt-get remove -y vim vim-runtime gvim//卸载vim vim-runtime gvim
+    sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox//卸载 vim-tiny vim-common vim-gui-common vim-nox
+    sudo rm -rf /usr/bin/vim*//删除vim相关组件
     sudo rm -rf /usr/local/bin/vim*
     sudo rm -rf /usr/share/vim/vim*
     sudo rm -rf /usr/local/share/vim/vim*
@@ -44,9 +44,9 @@ function compile_vim_on_ubuntu()
 
     sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
-        libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
+        libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev//安装软件
 
-    git clone https://github.com/vim/vim.git ~/vim
+    git clone https://github.com/vim/vim.git ~/vim//从github上下载到vim文件夹
     cd ~/vim
     ./configure --with-features=huge \
         --enable-multibyte \
